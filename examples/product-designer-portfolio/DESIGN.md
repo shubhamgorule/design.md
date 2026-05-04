@@ -1,63 +1,63 @@
 ---
 version: alpha
 name: Product Designer Portfolio
-description: Editorial, case-study-first portfolio surface for a senior product designer.
+description: Dark, minimal portfolio surface—bold type, near-monochrome, one structural accent.
 colors:
-  primary: "#0f172a"
-  secondary: "#64748b"
-  tertiary: "#2563eb"
-  neutral: "#f8fafc"
-  surface: "#ffffff"
-  on-surface: "#0f172a"
-  on-surface-variant: "#475569"
-  outline: "#e2e8f0"
-  tertiary-container: "#dbeafe"
-  on-tertiary-container: "#1e3a8a"
+  primary: "#fafafa"
+  secondary: "#737373"
+  tertiary: "#fafafa"
+  neutral: "#09090b"
+  surface: "#0f0f10"
+  on-surface: "#fafafa"
+  on-surface-variant: "#a3a3a3"
+  outline: "#262626"
+  tertiary-container: "#171717"
+  on-tertiary-container: "#e5e5e5"
 typography:
   headline-display:
-    fontFamily: "Fraunces"
-    fontSize: 3.5rem
-    fontWeight: 600
-    lineHeight: 1.05
-    letterSpacing: -0.03em
+    fontFamily: "Space Grotesk"
+    fontSize: 4rem
+    fontWeight: 700
+    lineHeight: 1.0
+    letterSpacing: -0.04em
   headline-lg:
-    fontFamily: "Fraunces"
-    fontSize: 2.25rem
-    fontWeight: 600
-    lineHeight: 1.15
-    letterSpacing: -0.02em
+    fontFamily: "Space Grotesk"
+    fontSize: 2.5rem
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: -0.03em
   headline-md:
-    fontFamily: "Fraunces"
-    fontSize: 1.5rem
+    fontFamily: "Space Grotesk"
+    fontSize: 1.375rem
     fontWeight: 600
-    lineHeight: 1.25
-    letterSpacing: -0.01em
+    lineHeight: 1.2
+    letterSpacing: -0.02em
   body-lg:
-    fontFamily: "DM Sans"
+    fontFamily: Inter
     fontSize: 1.125rem
     fontWeight: 400
     lineHeight: 1.65
   body-md:
-    fontFamily: "DM Sans"
+    fontFamily: Inter
     fontSize: 1rem
     fontWeight: 400
     lineHeight: 1.6
   body-sm:
-    fontFamily: "DM Sans"
+    fontFamily: Inter
     fontSize: 0.875rem
     fontWeight: 400
     lineHeight: 1.5
   label-md:
-    fontFamily: "DM Sans"
-    fontSize: 0.75rem
+    fontFamily: Inter
+    fontSize: 0.6875rem
     fontWeight: 600
     lineHeight: 1
-    letterSpacing: 0.12em
+    letterSpacing: 0.14em
 rounded:
-  sm: 6px
-  md: 10px
-  lg: 16px
-  xl: 24px
+  sm: 2px
+  md: 4px
+  lg: 8px
+  xl: 12px
   full: 9999px
 spacing:
   xs: 8px
@@ -66,26 +66,26 @@ spacing:
   lg: 40px
   xl: 64px
   gutter: 24px
-  section: 96px
+  section: 104px
 components:
   button-primary:
     backgroundColor: "{colors.tertiary}"
-    textColor: "#ffffff"
+    textColor: "{colors.neutral}"
     typography: "{typography.label-md}"
     rounded: "{rounded.md}"
-    padding: 14px 22px
-    height: 48px
+    padding: 16px 24px
+    height: 52px
   button-primary-hover:
-    backgroundColor: "#1d4ed8"
+    backgroundColor: "#e5e5e5"
   button-secondary:
     backgroundColor: "transparent"
     textColor: "{colors.primary}"
     typography: "{typography.label-md}"
     rounded: "{rounded.md}"
-    padding: 14px 22px
-    height: 48px
+    padding: 16px 24px
+    height: 52px
   button-secondary-hover:
-    backgroundColor: "{colors.neutral}"
+    backgroundColor: "{colors.surface}"
   card-project:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.on-surface}"
@@ -99,72 +99,67 @@ components:
     textColor: "{colors.on-tertiary-container}"
     typography: "{typography.label-md}"
     rounded: "{rounded.full}"
-    padding: 8px 14px
+    padding: 8px 12px
 ---
 
 ## Overview
 
-This portfolio reads as **confident editorial craft**: generous whitespace, a single serif display voice for headlines, and a restrained sans for narrative and metadata. The personality is clear and senior—built for recruiters and hiring managers scanning case studies, not decorative chrome.
+This portfolio is **dark, minimal, and loud through typography alone**. Almost everything sits on near-black with **one high-contrast axis**: huge geometric headlines in Space Grotesk, quiet Inter for supporting copy, and **white-on-ink** for the primary action. Decorative color is avoided; rhythm and weight carry the brand.
 
-The emotional response should feel **calm, precise, and trustworthy**, like a well-typeset annual report or design journal. Motion (if added later) stays subtle; hierarchy comes from scale, weight, and spacing—not from loud color blocks.
+The feeling is **editorial and direct**—gallery wall, not dashboard. Motion stays optional; when used, it should be fast and sparse (opacity or 4–8px translate), never bouncy.
 
 ## Colors
 
-The palette is anchored in **slate ink** on **cool paper**, with **one saturated blue** reserved for primary actions and key links.
+The system is **monochrome-first**. Surfaces are stepped blacks and charcoals; text is off-white for reduced glare. Borders are single-pixel zinc hairlines—visible but quiet.
 
-- **Primary (#0F172A):** Headlines, body text, and navigation emphasis. Maximum readability on light surfaces.
-- **Secondary (#64748B):** Supporting copy, captions, and inactive nav—keeps density readable without competing with work imagery.
-- **Tertiary (#2563EB):** The single interaction accent—primary buttons, inline links, and focus rings.
-- **Neutral (#F8FAFC):** Page canvas and alternating section bands to separate story blocks.
-- **Surface (#FFFFFF):** Cards and project tiles for a crisp lift from the neutral field.
+- **Primary (#FAFAFA):** Headlines, wordmark, and primary button label pair (with dark fill context in implementation).
+- **Secondary (#737373):** Navigation at rest, captions, metadata.
+- **Tertiary (#FAFAFA):** Reserved for **solid fills** that must read as “the” action (e.g. primary button background)—same chroma as primary, different role.
+- **Neutral (#09090B):** Global page canvas.
+- **Surface (#0F0F10):** Cards, hero aside, and alternating bands—one step above canvas.
+- **Outline (#262626):** Dividers and card strokes only—no drop shadows in the default spec.
 
 ## Typography
 
-**Fraunces** carries display and section titles—soft contrast and optical sizing suit portfolio hero lines. **DM Sans** handles everything else: bios, case study blurbs, labels, and UI chrome.
+**Space Grotesk** at **700** owns display and section titles—tight tracking, large sizes, minimal line height for impact. **Inter** handles body, excerpts, and UI labels at **400/600** only.
 
-- **Display / headlines:** Fraunces semibold, tight negative tracking for impact at large sizes.
-- **Body:** DM Sans regular at 16–18px for long-form case summaries.
-- **Labels:** DM Sans semibold, uppercase tracking for roles, dates, and section kicker lines.
+- **Display:** Space Grotesk Bold, up to ~4rem desktop; never smaller than ~2.25rem for the main hero line on mobile.
+- **Body:** Inter Regular 16–18px; max line length ~60 characters where possible.
+- **Labels:** Inter Semibold, uppercase, wide tracking—used for section kickers and tags.
 
 ## Layout
 
-Layout follows a **centered column** with a **max readable width of 1120px** and **24px gutters** on smaller viewports.
-
-- **Vertical rhythm:** Major sections use 96px top/bottom padding; within sections, stack related groups with 40px gaps.
-- **Case study grid:** On wide screens, featured work uses a two-column grid with 24px gutters; cards share equal visual weight so thumbnails do the talking.
+A **single centered column** (max **1120px**) with **24px gutters**. Sections breathe: **~104px** vertical padding. The work grid is **two columns** on large screens with a **24px** gutter; stacks to one column on narrow viewports.
 
 ## Elevation & Depth
 
-The surface is intentionally **flat**. Depth is communicated with:
-
-- **1px hairline borders** (`outline` token) on cards instead of heavy shadows.
-- **Optional shadow** on hero or primary CTA only: a single soft `0 24px 48px rgba(15, 23, 42, 0.08)` for the first fold—never stacked on every card.
+**No elevation by default.** Hierarchy is **type scale + surface step + outline**. If a consumer adds shadow for marketing hero only, use a single **soft, large diffuse** (e.g. `0 32px 64px rgba(0,0,0,0.45)`)—never on every card.
 
 ## Shapes
 
-Corners are **moderately rounded** (10–16px) to feel contemporary without toy-like pill aesthetics. Chips and tags use full rounding; imagery inside cards stays rectangular with `16px` outer radius on the container only.
+**Sharp minimal:** default corners are **2–8px**—barely rounded, engineered, not playful. Tags keep **pill** (`full`) as the only strongly rounded elements.
 
 ## Components
 
 ### Navigation
 
-Top bar is minimal: wordmark left, text links right. Active section uses `tertiary` underline or weight shift—not a filled pill.
+Fixed or sticky top bar: **transparent-to-canvas** blur optional. Links use `nav-link`; hover moves to **primary** text color, no background pill.
 
 ### Project cards
 
-White surface, hairline border, padding 24px. Title in `headline-md`, meta line in `body-sm` + `secondary`. Optional tag row uses `tag-chip` tokens.
+`card-project` token: **surface** fill, **outline** border, **24px** padding. Thumbnails sit in a muted inner frame (dark gradient or real imagery). Hover may lighten **outline** by one step only—no colored glow.
 
 ### Buttons
 
-Primary actions use `button-primary`; secondary outline-style uses `button-secondary` with visible border implied in implementation (token uses transparent fill; border is described in prose for consumers).
+**Primary:** white (`tertiary`) fill, **neutral** (#09090B) label for maximum contrast. **Secondary:** transparent, **outline** border, **primary** text.
 
 ### Tags
 
-Small uppercase labels for **Product**, **Systems**, **Research**—always `tertiary-container` fill so they read as taxonomy, not decoration.
+Use `tag-chip`: **tertiary-container** background, **on-tertiary-container** text—low contrast chips that read as taxonomy.
 
 ## Do's and Don'ts
 
-- Do let case study imagery and typography carry the page; avoid more than one accent color in a single viewport.
-- Do maintain WCAG AA contrast for all text on `surface` and `neutral` (4.5:1 minimum).
-- Don't use Fraunces below 18px for body copy—switch to DM Sans for legibility.
-- Don't mix more than two font weights in a single component (e.g., card title + excerpt).
+- Do keep the canvas consistently **neutral**; reserve **surface** for contained content only.
+- Do verify **4.5:1** contrast for all body text on **surface** and **neutral**.
+- Don't introduce a second accent hue in the default theme—breaks the minimal contract.
+- Don't use Space Grotesk below **18px** for paragraph text; switch to Inter.
